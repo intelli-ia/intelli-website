@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import heroImage from "@/assets/images/hero-partners.png"
 import { ArrowRight } from "lucide-react"
 import { DashBackground } from "@/components/ui/dash-background"
 import { NoiseBackground } from "@/components/ui/noise-background"
@@ -17,12 +16,12 @@ export function Hero() {
             {/* Full Screen Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src={heroImage}
+                    src="/hero.png"
                     alt="Sócios da Intelli"
                     className="w-full h-full object-cover"
                 />
                 {/* Dark Overlay for Text Readability - Adjusted for image visibility */}
-                <div className="absolute inset-0 bg-gradient-to-r from-intelli-blue/95 via-intelli-blue/70 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-intelli-blue/95 via-intelli-blue/80 via-30% to-transparent to-60%"></div>
 
                 {/* Antigravity Particle Effect */}
                 <DashBackground />
