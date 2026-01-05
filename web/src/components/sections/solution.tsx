@@ -100,18 +100,18 @@ const ChatAnimation = () => {
 }
 
 const ORBITAL_ICONS = [
-    { name: "WhatsApp", logo: "/src/assets/images/logos/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.webp", scale: 2.3 },
-    { name: "Salesforce", logo: "/src/assets/images/logos/Salesforce.com_logo.svg.png", scale: 1.7 },
-    { name: "Google Calendar", logo: "/src/assets/images/logos/Google-Calendar-Logo.png", scale: 1.8 },
-    { name: "HubSpot", logo: "/src/assets/images/logos/HubSpot-Simbolo.png", scale: 2.0 },
-    { name: "Meta", logo: "/src/assets/images/logos/meta_PNG12.png", scale: 2.0 },
-    { name: "Pipedrive", logo: "/src/assets/images/logos/pipedrive.webp", scale: 2.0 },
-    { name: "Gmail", logo: "/src/assets/images/logos/Gmail_Logo_512px.png.webp", scale: 1.0 },
-    { name: "OpenAI", logo: "/src/assets/images/logos/openai.webp", scale: 1.1 },
-    { name: "Kommo", logo: "/src/assets/images/logos/kommo.png", scale: 2.0 },
-    { name: "Google Ads", logo: "/src/assets/images/logos/lg-66d67065d6779-Google-Ads-Logo.webp", scale: 1.4 },
-    { name: "Omie", logo: "/src/assets/images/logos/omie.png", scale: 2.0 },
-    { name: "Amigoapp", logo: "/src/assets/images/logos/amigoapp.png", scale: 1.7 },
+    { name: "WhatsApp", logo: "/logos/whatsapp-logo-whatsapp-icon-whatsapp-transparent-free-png.webp", scale: 2.3 },
+    { name: "Salesforce", logo: "/logos/Salesforce.com_logo.svg.png", scale: 1.7 },
+    { name: "Google Calendar", logo: "/logos/Google-Calendar-Logo.png", scale: 1.8 },
+    { name: "HubSpot", logo: "/logos/HubSpot-Simbolo.png", scale: 2.0 },
+    { name: "Meta", logo: "/logos/meta_PNG12.png", scale: 2.0 },
+    { name: "Pipedrive", logo: "/logos/pipedrive.webp", scale: 2.0 },
+    { name: "Gmail", logo: "/logos/Gmail_Logo_512px.png.webp", scale: 1.0 },
+    { name: "OpenAI", logo: "/logos/openai.webp", scale: 1.1 },
+    { name: "Kommo", logo: "/logos/kommo.png", scale: 2.0 },
+    { name: "Google Ads", logo: "/logos/lg-66d67065d6779-Google-Ads-Logo.webp", scale: 1.4 },
+    { name: "Omie", logo: "/logos/omie.png", scale: 2.0 },
+    { name: "Amigoapp", logo: "/logos/amigoapp.png", scale: 1.7 },
 ]
 
 const IntegrationSync = () => {
