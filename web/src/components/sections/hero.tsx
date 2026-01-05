@@ -41,18 +41,17 @@ export function Hero() {
 
                     <div className="flex justify-start">
                         <NoiseBackground
-                            containerClassName="rounded-full shadow-[0_0_20px_rgba(191,255,0,0.2)] transition-all duration-300 hover:scale-105"
+                            containerClassName="rounded-full shadow-[0_0_20px_rgba(191,255,0,0.2)] transition-all duration-10 ease-in-out hover:scale-105"
                             gradientColors={[
                                 "#BFFF00", // intelli-green
                                 "#00FFD0", // cyan-green
-                                "#007023", // vibrant blue
                                 "#BFFF00"  // Loop back to green
                             ]}
                             noiseOpacity={0.25}
                         >
                             <Button
                                 onClick={scrollToNext}
-                                className="bg-intelli-green text-intelli-blue hover:bg-[#8eff03] font-bold text-base px-10 py-3 h-auto rounded-full transition-all duration-300 flex items-center gap-2 group shadow-inner"
+                                className="bg-intelli-green text-intelli-blue font-bold hover:bg-intelli-green text-base px-10 py-3 h-auto rounded-full transition-all duration-300 flex items-center gap-2 group shadow-inner"
                             >
                                 Quero conhecer
                                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:rotate-90" />
