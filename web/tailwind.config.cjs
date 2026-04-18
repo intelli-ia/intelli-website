@@ -18,13 +18,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Figtree", "sans-serif"],
       },
       colors: {
         // Intelli Brand Colors
         'intelli-green': '#BFFF00',
         'intelli-blue': '#0A0E27',
-        'intelli-offwhite': '#F8F9FA',
+        'intelli-offwhite': '#FDFBF7',
         'intelli-gray': '#A0A0A0',
 
         border: "hsl(var(--border))",
@@ -105,6 +105,10 @@ module.exports = {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -115,6 +119,7 @@ module.exports = {
         "rotate-full": "rotate-full 6s linear infinite",
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        float: "float 6s ease-in-out infinite",
       },
     },
   },
