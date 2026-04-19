@@ -14,9 +14,9 @@ export function Hero() {
     const words = [
         "IA para atendimento",
         "Captação de clientes",
-        "Relatórios comerciais",
-        "Dashboards de tráfego",
-        "Infraestrutura digital"
+        "Relatórios diários",
+        "Dashboards comerciais",
+        "Website e infraestrutura"
     ]
 
     return (
@@ -25,22 +25,27 @@ export function Hero() {
             <div className="flex-1 flex items-start container mx-auto px-4 md:px-6">
                 <div className="w-full grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
                     {/* Left Column: Content */}
-                    <div className="space-y-10 animate-fade-in-down lg:pt-6 lg:pl-16">
+                    <div className="space-y-10 lg:pt-6 lg:pl-16">
                         <div className="space-y-6">
+                            {/* Logo */}
+                            <div className="flex items-center gap-2.5">
+                                <img src="/intelli-logo.png" alt="Intelli" className="h-10 w-10 object-cover rounded-xl" />
+                                <span className="font-sans font-bold text-xl text-[#0A0E27] tracking-tight">intelli</span>
+                            </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-[#1A202C] leading-[1.2] tracking-tight">
-                                Otimize o seu negócio com <TextRotator texts={words} className="text-[#FF7A2F] font-semibold" />
+                                Otimize o seu negócio com <TextRotator texts={words} className="text-[#0A0E27] font-semibold" />
                             </h1>
-                            <p className="text-[#4A5568] text-lg md:text-2xl max-w-xl leading-relaxed font-normal">
-                                A Intelli une tecnologia de ponta e marketing orientado a dados para desbloquear o verdadeiro potencial de crescimento da sua empresa.
+                            <p className="text-[#4A5568] text-base md:text-lg max-w-xl leading-relaxed font-light">
+                                A Intelli potencializou <span className="font-semibold text-[#1A202C]">mais de 120 empresas</span> com funis de vendas <span className="font-semibold text-[#1A202C]">automatizados com IA</span>, ajudando negócios a converter mais clientes e escalar com previsibilidade.
                             </p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button
                                 onClick={scrollToNext}
-                                className="bg-[#FF7A2F] hover:bg-[#E66922] text-white font-bold text-base px-6 py-3 h-auto rounded-xl transition-all duration-300 flex items-center gap-2 group shadow-lg shadow-orange-100"
+                                className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-bold text-base px-6 py-3 h-auto rounded-xl transition-all duration-300 flex items-center gap-2 group shadow-lg"
                             >
-                                Impulsionar meus resultados
+                                Conheça a nossa solução
                                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                             </Button>
                         </div>
@@ -56,9 +61,7 @@ export function Hero() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E27]/40 to-transparent"></div>
                         </div>
-                        {/* Decorative Elements */}
-                        <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-intelli-green rounded-full blur-3xl opacity-30 animate-pulse"></div>
-                        <div className="absolute -left-20 -top-20 w-48 h-48 bg-[#FF7A2F] rounded-full blur-[100px] opacity-10 animate-pulse"></div>
+
                     </div>
                 </div>
             </div>
