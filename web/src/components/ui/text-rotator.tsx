@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion, HTMLMotionProps } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import type { HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface TextRotatorProps {
@@ -9,11 +10,11 @@ interface TextRotatorProps {
   motionProps?: HTMLMotionProps<"span">;
 }
 
-export function TextRotator({ 
-  texts, 
-  interval = 3000, 
+export function TextRotator({
+  texts,
+  interval = 2500,
   className,
-  motionProps 
+  motionProps
 }: TextRotatorProps) {
   const [index, setIndex] = useState(0);
 

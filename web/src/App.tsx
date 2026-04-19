@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/layout/navbar"
+
 import { Footer } from "@/components/layout/footer"
 import { Hero } from "@/components/sections/hero"
 import { Problem } from "@/components/sections/problem"
@@ -14,7 +14,7 @@ import { IntelliBrand } from "@/components/sections/intelli-brand"
 function App() {
   return (
     <div className="min-h-screen font-sans bg-background text-foreground">
-      <Navbar />
+
 
       <main className="flex flex-col">
         <Hero />
