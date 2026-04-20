@@ -11,14 +11,14 @@ export function Hero() {
     }
 
     return (
-        <section className="min-h-[calc(100vh-4rem)] w-full flex flex-col bg-[#faf5ed] pt-16 overflow-hidden">
+        <section className="min-h-[calc(100vh-4rem)] w-full flex flex-col bg-[#faf5ed] pt-28 md:pt-36 lg:pt-44 overflow-hidden">
             {/* Main content - grows to fill available space */}
             <div className="flex-1 flex items-start container mx-auto px-4 md:px-6 lg:pl-16">
                 <div className="w-full flex flex-col-reverse lg:grid lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-12 items-center lg:items-start">
                     {/* Left Column: Content */}
                     <div className="space-y-8 lg:space-y-10 lg:pt-6 flex flex-col items-center lg:items-start text-center lg:text-left">
                         <div className="space-y-6">
-                            <h1 className="font-garamond text-4xl md:text-6xl lg:text-8xl font-normal text-[#1A202C] leading-[1.15] tracking-tight">
+                            <h1 className="font-garamond text-[2.75rem] md:text-6xl lg:text-8xl font-normal text-[#1A202C] leading-[1.15] tracking-tight">
                                 Automatize seu fluxo<br />de vendas com IA
                             </h1>
                             <p className="text-[#4A5568] text-base md:text-xl max-w-xl leading-relaxed font-light mx-auto lg:mx-0">
