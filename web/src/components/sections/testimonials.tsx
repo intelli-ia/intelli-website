@@ -4,46 +4,46 @@ const testimonials = [
     {
         name: "Patrícia Souza",
         content: "Já gosto de vc 🚀 Prático e direto. Impressionada! Vc tem liderança na veia! E olhe q vc tá falando com uma governante, então tenho o olhar crítico kkkk Parabéns, sem arrodeios. Líder nato 🚀 Guilherme querido, que post maravilhoso, ameii, aprovado 🩷🩷🩷",
-        avatar: "https://i.pravatar.cc/150?u=patricia"
+        avatar: "/testemonials/img-1.jpg"
     },
     {
         name: "Vanessa Lessa",
         role: "Two do Design",
         content: "Vc não é gente, é anjo. Não ta bom não, tá perfeito. Não sei como vamos fazer... mas eu gostei demaissssss.",
-        avatar: "https://i.pravatar.cc/150?u=vanessa"
+        avatar: "/testemonials/img-2.jpg"
     },
     {
         name: "Dr. Ivo Alves",
         role: "Clínica Medicamp",
         content: "A IA realmente ta cada vez melhor. Faz toda diferença nos atendimentos via ZAP. Gostei das cores agora do site... mto bom. E olha, já chegaram pacientes hj que procuraram pelo google. Parabens a vcs.",
-        avatar: "https://i.pravatar.cc/150?u=ivo"
+        avatar: "/testemonials/img-3.jpg"
     },
     {
         name: "Rose Jesus",
         role: "Belle Santé",
         content: "Tivemos uma experiência péssima com uma IA anterior. Vocês entraram para resolver e dentro de dias mudaram o jogo. Hoje os clientes nem sabem se estão falando com um humano ou com a IA. Perguntei para a minha equipe como estava o atendimento agora e a resposta foi: 'está incrível'.",
-        avatar: "https://i.pravatar.cc/150?u=rose"
+        avatar: "/testemonials/img-4.jpg"
     },
     {
         name: "Aline Mendonça",
         role: "Active Pilates",
         content: "Rapaz, sei nem o que dizer. Isso ficou incrível.",
-        avatar: "https://i.pravatar.cc/150?u=aline"
+        avatar: "/testemonials/img-5.jpg"
     },
     {
         name: "Dra. Juliana Karaoglan",
         content: "Gostei muito! Tom divertido e informativo.",
-        avatar: "https://i.pravatar.cc/150?u=juliana"
+        avatar: "/testemonials/img-6.jpg"
     },
     {
         name: "Dra. Rayanna Bahia",
         content: "Acho que tá ótimo o atendimento de Maria. As respostas dela estão bem conectadas.",
-        avatar: "https://i.pravatar.cc/150?u=rayanna"
+        avatar: "/testemonials/img-7.jpg"
     },
     {
         name: "Dr. Ian Damas",
         content: "Melhorou muito. Estão chegando pacientes mais próximos da minha área. Minha impressão é que melhorou muito a interação...",
-        avatar: "https://i.pravatar.cc/150?u=ian"
+        avatar: "/testemonials/img-8.jpg"
     }
 ]
 
@@ -98,8 +98,8 @@ export function Testimonials() {
                                     className="w-14 h-14 rounded-full object-cover border-2 border-[#BFFF00]/20"
                                 />
                             </div>
-                            <p className="text-white text-base md:text-lg leading-relaxed font-light mb-6 italic">
-                                "{t.content}"
+                            <p className="text-white/90 text-base md:text-lg leading-relaxed font-thin tracking-wide antialiased mb-6">
+                                {t.content}
                             </p>
                             <div>
                                 <h4 className="text-white font-semibold text-sm md:text-base">{t.name}</h4>
