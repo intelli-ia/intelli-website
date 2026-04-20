@@ -3,7 +3,7 @@ import { Globe, Database, Bot, Bell } from "lucide-react"
 
 export function Pitch() {
     return (
-        <section id="pitch" className="relative bg-[#0A0E27] rounded-t-[6rem] mt-12 pt-24 pb-28 overflow-hidden">
+        <section id="pitch" className="relative bg-[#0A0E27] rounded-[6rem] mt-12 pt-24 pb-28 overflow-hidden">
             {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#0A0E27] via-[#111830] to-[#0d1535] pointer-events-none" />
 

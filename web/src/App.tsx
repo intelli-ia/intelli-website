@@ -10,6 +10,7 @@ import { SuccessCases } from "@/components/sections/success-cases"
 import { Differentiators } from "@/components/sections/differentiators"
 import { CTA } from "@/components/sections/cta"
 import { IntelliBrand } from "@/components/sections/intelli-brand"
+import { Testimonials } from "@/components/sections/testimonials"
 
 
 function App() {
@@ -19,14 +20,15 @@ function App() {
 <main className="flex flex-col">
         <Hero />
         <Pitch />
-        <Problem />
+        <Testimonials />
+        {/* <Problem />
         <Solution />
         <IntegrationHighlight />
         <Services />
         <HowItWorks />
         <SuccessCases />
         <Differentiators />
-        <CTA />
+        <CTA /> */}
         <IntelliBrand />
       </main>
 

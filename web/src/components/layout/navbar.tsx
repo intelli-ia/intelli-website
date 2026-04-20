@@ -29,31 +29,16 @@ export function Navbar() {
                     : "bg-[#faf5ed]"
             )}
         >
-            <div className="container mx-auto px-4 md:px-8 lg:pl-32 h-16 flex items-center justify-between">
+            <div className="container mx-auto px-4 md:px-8 lg:pl-16 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2.5 shrink-0">
-                    <img
-                        src="/intelli-logo.png"
-                        alt="Intelli"
-                        className="h-9 w-9 object-cover rounded-xl"
-                    />
                     <span className="font-sans font-bold text-xl text-[#0A0E27] tracking-tight">
                         intelli
                     </span>
                 </a>
 
-                {/* Desktop Links */}
-                <nav className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.href}
-                            href={link.href}
-                            className="text-sm font-medium text-[#4A5568] hover:text-[#0A0E27] transition-colors duration-200"
-                        >
-                            {link.label}
-                        </a>
-                    ))}
-                </nav>
+                {/* Desktop Links - REMOVED per request */}
+                <div className="hidden md:block flex-1" />
 
                 {/* CTA Button + Mobile Toggle */}
                 <div className="flex items-center gap-3">
@@ -78,16 +63,6 @@ export function Navbar() {
             {/* Mobile Menu */}
             {mobileOpen && (
                 <div className="md:hidden bg-[#faf5ed] border-t border-gray-200/60 px-4 py-4 flex flex-col gap-4">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.href}
-                            href={link.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="text-sm font-medium text-[#4A5568] hover:text-[#0A0E27] transition-colors"
-                        >
-                            {link.label}
-                        </a>
-                    ))}
                     <Button
                         asChild
                         className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-semibold text-sm px-5 h-11 rounded-xl"
