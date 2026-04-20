@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { TextRotator } from "@/components/ui/text-rotator"
 import { Marquee } from "@/components/ui/marquee"
 
 export function Hero() {
@@ -10,14 +9,6 @@ export function Hero() {
             nextSection.scrollIntoView({ behavior: 'smooth' })
         }
     }
-
-    const words = [
-        "IA para atendimento",
-        "captação de clientes",
-        "relatórios diários",
-        "dashboards comerciais",
-        "website e infraestrutura"
-    ]
 
     return (
         <section className="min-h-[calc(100vh-4rem)] w-full flex flex-col bg-[#faf5ed] pt-16 overflow-hidden">
