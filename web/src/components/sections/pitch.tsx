@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Globe, Database, Bot, Zap } from "lucide-react"
+import { Globe, Database, Bot, Bell } from "lucide-react"
 
 export function Pitch() {
     return (
@@ -15,14 +15,14 @@ export function Pitch() {
                             { icon: Globe, label: "Infraestrutura" },
                             { icon: Database, label: "Dados" },
                             { icon: Bot, label: "Agentes de IA" },
-                            { icon: Zap, label: "Conversão" },
+                            { icon: Bell, label: "Conversão" },
                         ].map((item, idx) => (
                             <div 
                                 key={idx}
-                                className="flex items-center gap-2 px-6 py-2.5 bg-transparent border-2 border-white rounded-full text-white"
+                                className="flex items-center gap-2 px-5 py-2 bg-transparent border-2 border-white rounded-full text-white"
                             >
                                 <item.icon className="w-4 h-4" />
-                                <span className="text-sm font-semibold tracking-tight uppercase whitespace-nowrap">
+                                <span className="text-[12px] font-bold tracking-widest uppercase whitespace-nowrap">
                                     {item.label}
                                 </span>
                             </div>
@@ -36,14 +36,8 @@ export function Pitch() {
                     </h2>
 
                     {/* Body */}
-                    <p className="text-white/60 text-lg md:text-xl leading-relaxed font-light max-w-2xl mx-auto">
-                        O seu negócio organiza o posicionamento online, capta clientes com{" "}
-                        <span className="text-white font-medium">tráfego rastreável</span>{" "}
-                        e os seus{" "}
-                        <span className="text-white font-medium">agentes de IA</span>{" "}
-                        assumem o atendimento 24h por dia, preenchem o CRM e enviam{" "}
-                        <span className="text-white font-medium">relatórios diários</span>{" "}
-                        para a sua equipe.
+                    <p className="text-white text-lg md:text-xl leading-relaxed font-light max-w-2xl mx-auto">
+                        Tráfego rastreável e agentes de IA<br className="hidden md:block" /> operando toda a sua estrutura comercial.
                     </p>
                 </div>
 
