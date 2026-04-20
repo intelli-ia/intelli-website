@@ -46,7 +46,13 @@ export function Navbar() {
                         asChild
                         className="hidden sm:inline-flex bg-[#0A0E27] hover:bg-[#1a2244] text-white font-semibold text-sm px-5 py-2.5 h-auto rounded-xl transition-all duration-200"
                     >
-                        <a href="#contact">Agende uma Consultoria</a>
+                        <a 
+                            href={`https://wa.me/5571983477264?text=${encodeURIComponent("Vi o site e gostaria de entender melhor o processo")}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Agendar Consultoria
+                        </a>
                     </Button>
 
                     {/* Mobile menu toggle */}
@@ -67,7 +73,14 @@ export function Navbar() {
                         asChild
                         className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-semibold text-sm px-5 h-11 rounded-xl"
                     >
-                        <a href="#contact" onClick={() => setMobileOpen(false)}>Agende uma Consultoria</a>
+                        <a 
+                            href={`https://wa.me/5571983477264?text=${encodeURIComponent("Vi o site e gostaria de entender melhor o processo")}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            Agendar Consultoria
+                        </a>
                     </Button>
                 </div>
             )}

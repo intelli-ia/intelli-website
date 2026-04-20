@@ -38,15 +38,20 @@ export function CTA() {
                             className="flex flex-col items-center"
                         >
                             <h2 className="font-garamond text-4xl md:text-6xl text-white leading-[1.1] mb-24 max-w-3xl">
-                                <span className="font-bold">Inteligência</span> que trabalha tão duro quanto você
+                                Aplique <span className="font-bold">inteligência</span> no seu processo comercial
                             </h2>
                             <p className="text-white font-normal text-lg md:text-xl mb-10 max-w-2xl leading-relaxed">
                                 Atendimento 24h com agentes de IA orquestrados, tráfego milimetricamente rastreado e conversão contínua.                            </p>
 
-                            <button className="group bg-[#BFFF00] hover:bg-[#d4ff4d] text-[#0A0E27] px-10 py-5 rounded-xl text-lg font-bold flex items-center gap-3 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#BFFF00]/10">
+                            <a
+                                href={`https://wa.me/5571983477264?text=${encodeURIComponent("Vi o site e gostaria de entender melhor o processo")}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group bg-[#BFFF00] hover:bg-[#d4ff4d] text-[#0A0E27] px-10 py-5 rounded-xl text-lg font-bold flex items-center gap-3 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#BFFF00]/10"
+                            >
                                 Agendar Consultoria
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                         </motion.div>
                     </div>
                 </div>

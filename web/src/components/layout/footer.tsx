@@ -1,6 +1,7 @@
 export function Footer() {
-    const whatsappNumber = "71993211234";
-    const whatsappLink = `https://wa.me/55${whatsappNumber}`;
+    const whatsappNumber = "71983477264";
+    const whatsappMessage = encodeURIComponent("Vi o site e gostaria de entender melhor o processo");
+    const whatsappLink = `https://wa.me/55${whatsappNumber}?text=${whatsappMessage}`;
 
     return (
         <footer className="bg-[#faf5ed] text-intelli-blue py-12">
@@ -17,7 +18,7 @@ export function Footer() {
                             className="relative text-xl md:text-1xl font-bold text-intelli-blue px-4 py-1 rounded-full overflow-hidden group transition-colors duration-300"
                         >
                             <span className="relative z-10 group-hover:text-intelli-green transition-colors duration-300">
-                                (71) 99321-1234
+                                (71) 98347-7264
                             </span>
                             <span className="absolute inset-0 bg-intelli-blue scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left rounded-full"></span>
                         </a>
