@@ -1,69 +1,56 @@
-import { useEffect } from "react"
-import Cal, { getCalApi } from "@calcom/embed-react"
-import { SectionWrapper } from "@/components/ui/section-wrapper"
+import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function CTA() {
-    useEffect(() => {
-        (async function () {
-            const cal = await getCalApi({ "namespace": "bate-papo-intelli" })
-            cal("ui", { "theme": "light", "styles": { "branding": { "brandColor": "#0A0E27" } }, "hideEventTypeDetails": false, "layout": "month_view", "hideBranding": true } as any)
-        })();
-    }, [])
-
     return (
-        <SectionWrapper id="contact" className="bg-intelli-offwhite py-24 md:py-32">
-            <div className="max-w-4xl mx-auto text-center space-y-12 md:space-y-16">
+        <section className="bg-[#faf5ed] pb-32 pt-16">
+            <div className="container mx-auto px-4">
+                <div className="relative max-w-6xl mx-auto bg-[#0A0E27] rounded-[3rem] md:rounded-[4rem] overflow-hidden min-h-[450px] flex items-center justify-center text-center">
 
-                {/* Stage 1: Identification */}
-                <div className="space-y-8">
-                    <h2 className="text-3xl md:text-5xl font-bold text-intelli-blue leading-tight max-w-3xl mx-auto">
-                        Se você leu até aqui e ficou pensando <br />
-                        <span className="text-intelli-green bg-intelli-blue px-2 py-1 rounded inline-block mt-4 leading-[1.2]">
-                            "Caramba, tem muita coisa que eu poderia estar fazendo melhor..."
-                        </span>
-                    </h2>
+                    {/* SVG Filters for motion blur */}
+                    <svg className="absolute w-0 h-0 invisible">
+                        <defs>
+                            <filter id="motion-blur-filter">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="15 0" />
+                            </filter>
+                        </defs>
+                    </svg>
 
-                    <p className="text-xl md:text-2xl text-intelli-blue/90 font-medium max-w-2xl mx-auto">
-                        Quero te oferecer essa oportunidade de conversar diretamente conosco por 30 minutinhos sem custo, sem compromisso de fechar nada, <span className="font-bold text-intelli-blue">sem pegadinha de marketing.</span>
-                    </p>
-                </div>
+                    {/* Dark uniform overlay for legibility */}
+                    <div className="absolute inset-0 bg-black/60 z-10" />
 
-                {/* Stage 3: The Narrative */}
-                <div className="max-w-3xl mx-auto space-y-8 text-lg md:text-xl text-intelli-blue/80 leading-relaxed">
-                    <p>
-                        É um papo tranquilo mesmo. Você conta o que acha que precisa melhorar, a gente compartilha o que já fizemos
-                        funcionar em <span className="font-bold text-intelli-blue">mais de 100 negócios</span> diferentes e dessa conversa<span className="font-bold text-intelli-blue"> você recebe um material em PDF</span> com as ideias organizadas.<br /><br />
-                        É seu. Pode aplicar sozinho, pode contratar quem você quiser, ou simplesmente guardar pra quando fizer sentido.
-                    </p>
-
-                    <p>
-                        Nosso propósito é esse: ajudar empreendedores a enxergarem melhor
-                        seus próprios negócios. A gente fica genuinamente feliz vendo alguém
-                        sair daqui com mais clareza do que antes.
-                    </p>
-                </div>
-
-                {/* Stage 5: Final Call to Action */}
-                <div className="space-y-10">
-                    <p className="text-2xl md:text-3xl font-bold text-intelli-blue">
-                        Se isso faz sentido pra você, não deixe a graça passar: <br className="hidden md:block" />
-                        <span className="font-bold bg-intelli-blue px-2 py-1 rounded text-intelli-green !leading-[2.0]">Escolha um horário aí embaixo pra gente conversar</span>
-                    </p>
-
-                    {/* Cal.com Embed Container */}
-                    <div className="w-full bg-white rounded-3xl overflow-hidden shadow-sm">
-                        <Cal
-                            namespace="bate-papo-intelli"
-                            calLink="intelli-qjajuc/bate-papo-intelli"
-                            style={{ width: "100%", height: "100%", minHeight: "650px" }}
-                            config={{ "layout": "month_view", "theme": "light" }}
+                    {/* Background Image with custom motion blur */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src="/cta.jpg"
+                            alt=""
+                            className="w-full h-full object-cover scale-110"
+                            style={{ filter: 'url(#motion-blur-filter) blur(2px)' }}
                         />
                     </div>
 
+                    <div className="relative z-20 w-full max-w-4xl px-8 py-16 md:px-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="flex flex-col items-center"
+                        >
+                            <h2 className="font-garamond text-4xl md:text-6xl text-white leading-[1.1] mb-24 max-w-3xl">
+                                <span className="font-bold">Inteligência</span> que trabalha tão duro quanto você
+                            </h2>
+                            <p className="text-white font-normal text-lg md:text-xl mb-10 max-w-2xl leading-relaxed">
+                                Atendimento 24h com agentes de IA orquestrados, tráfego milimetricamente rastreado e conversão contínua.                            </p>
 
+                            <button className="group bg-[#BFFF00] hover:bg-[#d4ff4d] text-[#0A0E27] px-10 py-5 rounded-xl text-lg font-bold flex items-center gap-3 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#BFFF00]/10">
+                                Agendar Consultoria
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </button>
+                        </motion.div>
+                    </div>
                 </div>
-
             </div>
-        </SectionWrapper >
+        </section>
     )
 }

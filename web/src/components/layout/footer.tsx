@@ -3,7 +3,7 @@ export function Footer() {
     const whatsappLink = `https://wa.me/55${whatsappNumber}`;
 
     return (
-        <footer className="bg-intelli-offwhite text-intelli-blue py-12 border-t border-gray-100">
+        <footer className="bg-[#faf5ed] text-intelli-blue py-12">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8">
 
@@ -24,7 +24,7 @@ export function Footer() {
                     </div>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+                <div className="mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
                     <p>© 2026 | Todos os direitos reservados.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-intelli-blue transition-colors">Política de Privacidade</a>

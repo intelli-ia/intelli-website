@@ -15,20 +15,13 @@ import { Testimonials } from "@/components/sections/testimonials"
 
 function App() {
   return (
-    <div className="min-h-screen font-sans bg-background text-foreground">
+    <div className="min-h-screen bg-[#faf5ed] selection:bg-[#BFFF00] selection:text-[#0A0E27]">
       <Navbar />
-<main className="flex flex-col">
+      <main className="flex flex-col">
         <Hero />
         <Pitch />
         <Testimonials />
-        {/* <Problem />
-        <Solution />
-        <IntegrationHighlight />
-        <Services />
-        <HowItWorks />
-        <SuccessCases />
-        <Differentiators />
-        <CTA /> */}
+        <CTA />
         <IntelliBrand />
       </main>
 
