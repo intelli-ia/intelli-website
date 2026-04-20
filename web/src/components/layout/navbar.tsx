@@ -1,21 +1,12 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-const navLinks = [
-    { label: "Como Funciona", href: "#how-it-works" },
-    { label: "Serviços", href: "#services" },
-    { label: "Cases", href: "#cases" },
-    { label: "Contato", href: "#contact" },
-]
 
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false)
-    const [mobileOpen, setMobileOpen] = useState(false)
 
     useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 10)
+        const handleScroll = () => setScrolled(window.scrollY > 20)
         window.addEventListener("scroll", handleScroll, { passive: true })
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
@@ -23,13 +14,18 @@ export function Navbar() {
     return (
         <header
             className={cn(
-                "sticky top-0 z-50 w-full transition-all duration-300",
-                scrolled
-                    ? "bg-[#faf5ed]/90 backdrop-blur-md border-b border-gray-200/60 shadow-sm"
-                    : "bg-[#faf5ed]"
+                "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 pt-4 px-4 w-full",
+                scrolled ? "pt-4" : "pt-6"
             )}
         >
-            <div className="container mx-auto px-4 md:px-8 lg:pl-16 h-16 flex items-center justify-between">
+            <div 
+                className={cn(
+                    "w-full max-w-6xl flex items-center justify-between px-6 h-14 transition-all duration-500",
+                    "bg-[#faf5ed]/80 backdrop-blur-xl border border-black/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+                    "rounded-2xl md:rounded-full",
+                    scrolled ? "max-w-4xl h-14" : "max-w-5xl h-16"
+                )}
+            >
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2.5 shrink-0">
                     <span className="font-sans font-bold text-xl text-[#0A0E27] tracking-tight">
@@ -37,14 +33,14 @@ export function Navbar() {
                     </span>
                 </a>
 
-                {/* Desktop Links - REMOVED per request */}
+                {/* Empty space where links were */}
                 <div className="hidden md:block flex-1" />
 
-                {/* CTA Button + Mobile Toggle */}
+                {/* Actions */}
                 <div className="flex items-center gap-3">
                     <Button
                         asChild
-                        className="hidden sm:inline-flex bg-[#0A0E27] hover:bg-[#1a2244] text-white font-semibold text-sm px-5 py-2.5 h-auto rounded-xl transition-all duration-200"
+                        className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-semibold text-sm px-6 h-10 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
                     >
                         <a 
                             href={`https://wa.me/5571983477264?text=${encodeURIComponent("Vi o site e gostaria de entender melhor o processo")}`}
@@ -55,35 +51,9 @@ export function Navbar() {
                         </a>
                     </Button>
 
-                    {/* Mobile menu toggle */}
-                    <button
-                        className="md:hidden p-2 text-[#0A0E27]"
-                        onClick={() => setMobileOpen((prev) => !prev)}
-                        aria-label="Toggle menu"
-                    >
-                        {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                    </button>
+                    {/* Mobile toggle - Only needed if there are links, but keeping it for consistency if we add links back, or removing if strictly unnecessary. User said remove links, so mobile menu is basically empty now. I'll remove the toggle too for a cleaner 'Island' if it's just logo + button. */}
                 </div>
             </div>
-
-            {/* Mobile Menu */}
-            {mobileOpen && (
-                <div className="md:hidden bg-[#faf5ed] border-t border-gray-200/60 px-4 py-4 flex flex-col gap-4">
-                    <Button
-                        asChild
-                        className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-semibold text-sm px-5 h-11 rounded-xl"
-                    >
-                        <a 
-                            href={`https://wa.me/5571983477264?text=${encodeURIComponent("Vi o site e gostaria de entender melhor o processo")}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => setMobileOpen(false)}
-                        >
-                            Agendar Consultoria
-                        </a>
-                    </Button>
-                </div>
-            )}
         </header>
     )
 }
