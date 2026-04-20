@@ -80,12 +80,12 @@ export function Testimonials() {
                             />
                         </svg>
                     </span>{" "}
-                    com a gente
+                    <span className="hidden md:inline">com a gente</span>
                 </h2>
             </div>
 
             <div className="relative">
-                <Marquee className="[--duration:120s] [--gap:3px] items-end">
+                <Marquee className="[--duration:60s] md:[--duration:120s] [--gap:3px] items-end">
                     {testimonials.map((t, i) => (
                         <div
                             key={i}

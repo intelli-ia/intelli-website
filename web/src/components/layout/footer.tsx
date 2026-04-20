@@ -9,7 +9,7 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8">
 
                     {/* Contact (WhatsApp) */}
-                    < div className="flex flex-col items-start md:items-start gap-2">
+                    <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest px-4">WhatsApp</span>
                         <a
                             href={whatsappLink}

@@ -3,14 +3,14 @@ import { Globe, Database, Bot, Bell } from "lucide-react"
 
 export function Pitch() {
     return (
-        <section id="pitch" className="relative bg-[#0A0E27] rounded-[6rem] mt-12 pt-24 pb-28 overflow-hidden">
+        <section id="pitch" className="relative bg-[#0A0E27] rounded-[3rem] lg:rounded-[6rem] mt-12 pt-12 lg:pt-24 pb-28 overflow-hidden">
             {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#0A0E27] via-[#111830] to-[#0d1535] pointer-events-none" />
 
             <div className="relative container mx-auto px-4 md:px-8 text-center">
                 <div className="max-w-3xl mx-auto">
                     {/* Pill Badges Row */}
-                    <div className="flex flex-wrap justify-center gap-0 mb-12">
+                    <div className="flex flex-wrap justify-center gap-[2px] mb-12">
                         {[
                             { icon: Globe, label: "Infraestrutura" },
                             { icon: Database, label: "Dados" },
@@ -86,7 +86,7 @@ export function Pitch() {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                                 {/* Content Block */}
                                 <motion.div
-                                    className={`text-left ${index % 2 !== 0 ? 'lg:order-2 lg:pl-16' : 'lg:text-left lg:pr-16'}`}
+                                    className={`text-center ${index % 2 !== 0 ? 'lg:order-2 lg:pl-16' : 'lg:pr-16'}`}
                                     initial={{ opacity: 0, x: index % 2 !== 0 ? 50 : -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}

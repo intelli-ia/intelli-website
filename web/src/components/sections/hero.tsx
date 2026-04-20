@@ -23,23 +23,22 @@ export function Hero() {
         <section className="min-h-[calc(100vh-4rem)] w-full flex flex-col bg-[#faf5ed] pt-16 overflow-hidden">
             {/* Main content - grows to fill available space */}
             <div className="flex-1 flex items-start container mx-auto px-4 md:px-6 lg:pl-16">
-                <div className="w-full grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+                <div className="w-full flex flex-col-reverse lg:grid lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-12 items-center lg:items-start">
                     {/* Left Column: Content */}
-                    <div className="space-y-10 lg:pt-6">
+                    <div className="space-y-8 lg:space-y-10 lg:pt-6 flex flex-col items-center lg:items-start text-center lg:text-left">
                         <div className="space-y-6">
-
-                            <h1 className="font-garamond text-5xl md:text-6xl lg:text-8xl font-normal text-[#1A202C] leading-[1.15] tracking-tight">
+                            <h1 className="font-garamond text-4xl md:text-6xl lg:text-8xl font-normal text-[#1A202C] leading-[1.15] tracking-tight">
                                 Automatize seu fluxo<br />de vendas com IA
                             </h1>
-                            <p className="text-[#4A5568] text-base md:text-xl max-w-xl leading-relaxed font-light">
+                            <p className="text-[#4A5568] text-base md:text-xl max-w-xl leading-relaxed font-light mx-auto lg:mx-0">
                                 A Intelli potencializou <span className="font-semibold text-[#1A202C]">mais de 120 empresas</span> com funis de vendas <span className="font-semibold text-[#1A202C]">automatizados com IA</span>, ajudando negócios a converter mais clientes através da internet.
                             </p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex justify-center lg:justify-start w-full lg:w-auto">
                             <Button
                                 onClick={scrollToNext}
-                                className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-thin text-base px-6 py-3 h-auto rounded-xl transition-all duration-300 flex items-center gap-2 group shadow-lg"
+                                className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-thin text-base px-6 py-3 h-auto rounded-xl transition-all duration-300 flex items-center gap-2 group shadow-lg w-auto"
                             >
                                 Conheça a nossa solução
                                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -48,8 +47,8 @@ export function Hero() {
                     </div>
 
                     {/* Right Column: Visual */}
-                    <div className="relative lg:h-[420px] flex items-center justify-start">
-                        <div className="relative w-full max-w-md aspect-[4/5] lg:aspect-auto lg:h-full rounded-[3rem] overflow-hidden shadow-2xl rotate-3">
+                    <div className="relative lg:h-[420px] flex items-center justify-center lg:justify-start w-full">
+                        <div className="relative w-full max-w-md aspect-[16/10] lg:aspect-auto lg:h-full rounded-2xl lg:rounded-[3rem] overflow-hidden shadow-2xl rotate-2">
                             <img
                                 src="/hero-new.png"
                                 alt="Intelli Tech Collaboration"
@@ -64,7 +63,7 @@ export function Hero() {
 
             {/* Client Logos Marquee - pinned naturally at bottom */}
             <div className="pb-8 pt-6">
-                <Marquee className="[--duration:80s] [--gap:4rem]">
+                <Marquee className="[--duration:40s] lg:[--duration:80s] [--gap:2rem] lg:[--gap:4rem]">
                     {[
                         "/customers/Frame-13.webp",
                         "/customers/Frame-14.webp",
