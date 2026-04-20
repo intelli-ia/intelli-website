@@ -1,6 +1,7 @@
-
+import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import { Hero } from "@/components/sections/hero"
+import { Pitch } from "@/components/sections/pitch"
 import { Problem } from "@/components/sections/problem"
 import { Solution, IntegrationHighlight } from "@/components/sections/solution"
 import { Services } from "@/components/sections/services"
@@ -14,10 +15,10 @@ import { IntelliBrand } from "@/components/sections/intelli-brand"
 function App() {
   return (
     <div className="min-h-screen font-sans bg-background text-foreground">
-
-
-      <main className="flex flex-col">
+      <Navbar />
+<main className="flex flex-col">
         <Hero />
+        <Pitch />
         <Problem />
         <Solution />
         <IntegrationHighlight />

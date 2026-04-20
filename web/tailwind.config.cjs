@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Figtree", "sans-serif"],
+        garamond: ["EB Garamond", "serif"],
       },
       colors: {
         // Intelli Brand Colors

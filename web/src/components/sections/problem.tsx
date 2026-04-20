@@ -37,7 +37,7 @@ export function Problem() {
     ]
 
     return (
-        <div id="problem" ref={containerRef} className="relative h-[300vh] bg-[#FDFBF7]">
+        <div id="problem" ref={containerRef} className="relative h-[300vh] bg-[#faf5ed]">
             <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
                 {/* Background Images */}
                 {textSegments.map((segment, index) => {
