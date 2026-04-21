@@ -7,6 +7,7 @@ interface MarqueeProps {
     children?: React.ReactNode;
     vertical?: boolean;
     repeat?: number;
+    childrenAlignment?: "start" | "center" | "end" | "stretch";
     [key: string]: any;
 }
 
@@ -17,6 +18,7 @@ export function Marquee({
     children,
     vertical = false,
     repeat = 4,
+    childrenAlignment = "center",
     ...props
 }: MarqueeProps) {
     return (
@@ -37,10 +39,14 @@ export function Marquee({
                     <div
                         key={i}
                         className={cn("flex shrink-0 justify-start [gap:var(--gap)]", {
-                            "animate-marquee flex-row items-center": !vertical,
+                            "animate-marquee flex-row": !vertical,
                             "animate-marquee-vertical flex-col": vertical,
                             "reverse": reverse,
                             "group-hover:[animation-play-state:paused]": pauseOnHover,
+                            "items-start": childrenAlignment === "start",
+                            "items-center": childrenAlignment === "center",
+                            "items-end": childrenAlignment === "end" || (vertical && childrenAlignment === "stretch"),
+                            "items-stretch": childrenAlignment === "stretch" && !vertical,
                         })}
                     >
                         {children}
