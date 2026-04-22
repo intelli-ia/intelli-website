@@ -19,7 +19,7 @@ export function Hero() {
                     {/* Content Area */}
                     <div className="space-y-6 md:space-y-8 max-w-4xl mx-auto">
                         <h1 className="font-garamond text-[2.75rem] md:text-7xl lg:text-8xl font-normal text-[#1A202C] leading-[1.1] tracking-tight">
-                            Automatize seu fluxo<br className="hidden md:block" />de vendas com IA
+                            Automatize seu fluxo<br className="hidden md:block" /> de vendas com IA
                         </h1>
                         <p className="text-[#4A5568] text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed font-light mx-auto">
                             A Intelli potencializou <span className="font-semibold text-[#1A202C]">mais de 120 empresas</span> com funis de vendas <span className="font-semibold text-[#1A202C]">automatizados com IA</span>, ajudando negócios a converter mais clientes.
