@@ -67,7 +67,7 @@ interface WordProps {
 }
 
 function Word({ children, progress, range, color, className, isNotated, notationColor }: WordProps) {
-  const opacity = useTransform(progress, range, [0.01, 1]);
+  const opacity = useTransform(progress, range, [0, 1]);
   
   return (
     <span className="relative inline-block">
