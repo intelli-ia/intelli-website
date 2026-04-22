@@ -54,7 +54,7 @@ export function Hero() {
                                     +120
                                 </span>
                                 <span className="text-[#4A5568] text-sm md:text-base font-medium leading-none">
-                                    projetos desenlvovidos com sucesso
+                                    projetos desenlvovidos
                                 </span>
                             </div>
                         </div>

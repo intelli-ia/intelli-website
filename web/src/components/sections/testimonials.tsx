@@ -85,8 +85,8 @@ export function Testimonials() {
             </div>
 
             <div className="relative">
-                <Marquee 
-                    className="[--duration:60s] md:[--duration:120s] [--gap:3px]"
+                <Marquee
+                    className="[--duration:60s] md:[--duration:60s] [--gap:3px]"
                     childrenAlignment="end"
                 >
                     {testimonials.map((t, i) => (
