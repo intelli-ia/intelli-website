@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface KineticTextProps {
@@ -43,17 +43,17 @@ interface WordProps {
   progress: any;
   range: [number, number];
   color: string;
+  className?: string;
 }
 
-function Word({ children, progress, range, color }: WordProps) {
-  const opacity = useTransform(progress, range, [0.2, 1]);
+function Word({ children, progress, range, color, className }: WordProps) {
+  const opacity = useTransform(progress, range, [0.01, 1]);
   
   return (
     <span className="relative inline-block">
-      <motion.span style={{ opacity }} className={cn(color)}>
+      <motion.span style={{ opacity }} className={cn(color, className)}>
         {children}
       </motion.span>
     </span>
   );
 }
-
