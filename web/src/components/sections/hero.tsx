@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { Marquee } from "@/components/ui/marquee"
+import { cn } from "@/lib/utils"
 
 export function Hero() {
     const scrollToNext = () => {
@@ -69,32 +70,36 @@ export function Hero() {
 
                 <Marquee className="[--duration:80s] [--gap:0rem] p-0">
                     {[
-                        "/customers/Frame-13.webp",
-                        "/customers/Frame-14.webp",
-                        "/customers/Frame-15.webp",
-                        "/customers/Frame-16.webp",
-                        "/customers/Frame-17.webp",
-                        "/customers/Frame-18.webp",
-                        "/customers/Frame-19.webp",
-                        "/customers/Frame-20.webp",
-                        "/customers/Frame-21.webp",
-                        "/customers/Frame-22.webp",
-                        "/customers/Frame-23.webp",
-                        "/customers/Frame-24.webp",
-                        "/customers/Frame-25.webp",
-                        "/customers/Frame-26.webp",
-                        "/customers/Frame-27.webp",
-                        "/customers/Frame-28.webp",
-                        "/customers/Frame-29.webp",
+                        "/customers/img-01.png",
+                        "/customers/img-02.png",
+                        "/customers/img-03.png",
+                        "/customers/img-04.png",
+                        "/customers/img-05.png",
+                        "/customers/img-06.png",
+                        "/customers/img-07.png",
+                        "/customers/img-08.png",
+                        "/customers/img-09.png",
+                        "/customers/img-10.png",
+                        "/customers/img-11.png",
+                        "/customers/img-12.png",
+                        "/customers/img-13.png",
+                        "/customers/img-14.png",
+                        "/customers/img-15.png",
+                        "/customers/img-16.png",
                     ].map((src) => (
                         <div
                             key={src}
-                            className="flex items-center justify-center px-4 md:px-8 py-0 border-r border-[#0A0E27]/5 min-w-[120px] md:min-w-[200px]"
+                            className="flex items-center justify-center px-4 md:px-8 h-20 md:h-32 border-r border-[#0A0E27]/5 min-w-[120px] md:min-w-[200px]"
                         >
                             <img
                                 src={src}
                                 alt="Customer logo"
-                                className="h-16 md:h-28 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-all duration-300 transform hover:scale-110"
+                                className={cn(
+                                    "w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-all duration-300 transform hover:scale-110",
+                                    (src.includes("img-11.png") || src.includes("img-12.png")) ? "h-14 md:h-24" :
+                                    (src.includes("img-03.png") || src.includes("img-04.png") || src.includes("img-05.png") || src.includes("img-10.png") || src.includes("img-13.png") || src.includes("img-14.png")) ? "h-6 md:h-10" :
+                                    "h-8 md:h-14"
+                                )}
                             />
                         </div>
                     ))}

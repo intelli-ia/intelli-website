@@ -27,13 +27,12 @@ export function CTA() {
                         {/* Kinetic Title */}
                         <KineticText 
                             text="Aplique inteligência no seu processo comercial"
-                            className="font-garamond text-4xl md:text-6xl lg:text-8xl text-intelli-blue leading-[1.1] mb-12 max-w-4xl"
+                            className="font-garamond text-5xl md:text-8xl lg:text-[9.5rem] text-intelli-blue leading-[0.75] lg:leading-[0.65] mb-12 max-w-7xl"
                             color="text-intelli-blue"
                             progress={titleProgress}
+                            notationWord="comercial"
+                            notationColor="#BFFF00"
                         />
-
-
-
 
                         {/* Revealed Content */}
                         <motion.div
@@ -63,5 +62,3 @@ export function CTA() {
         </section>
     )
 }
-
-
