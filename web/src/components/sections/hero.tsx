@@ -89,7 +89,7 @@ export function Hero() {
                     ].map((src) => (
                         <div
                             key={src}
-                            className="flex items-center justify-center px-4 md:px-8 h-20 md:h-32 border-r border-[#0A0E27]/5 min-w-[120px] md:min-w-[200px]"
+                            className="flex items-center justify-center px-4 md:px-8 h-16 md:h-28 border-r border-[#0A0E27]/5 min-w-[120px] md:min-w-[200px]"
                         >
                             <img
                                 src={src}
