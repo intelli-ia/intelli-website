@@ -10,8 +10,8 @@ export function TermsOfUse() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="inline-flex items-center gap-2 text-intelli-blue/60 hover:text-intelli-blue mb-8 transition-colors group"
         >
           <ChevronLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -20,7 +20,7 @@ export function TermsOfUse() {
         <h1 className="text-4xl md:text-5xl font-garamond font-bold text-intelli-blue mb-8">
           Termos de Uso
         </h1>
-        
+
         <div className="prose prose-lg text-intelli-blue/80 font-sans space-y-6">
           <section>
             <h2 className="text-2xl font-bold text-intelli-blue mt-8 mb-4">1. Aceitação dos Termos</h2>
@@ -77,7 +77,7 @@ export function TermsOfUse() {
           </section>
 
           <section className="pt-8 text-sm italic">
-            <p>Última atualização: 12 de fevereiro de 2026</p>
+            <p>Última atualização: 22 de abril de 2026</p>
           </section>
         </div>
       </motion.div>
