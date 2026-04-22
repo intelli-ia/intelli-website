@@ -12,7 +12,7 @@ export function RoughCircle({ progress, range, color = "#BFFF00" }: RoughCircleP
   return (
     <svg
       viewBox="0 0 200 100"
-      className="absolute -inset-x-14 -top-1 -bottom-7 w-[calc(100%+5rem)] h-[calc(100%+2rem)] pointer-events-none z-[-1]"
+      className="absolute -left-5 -right-7 md:-inset-x-14 -top-1 md:-top-1 -bottom-2 md:-bottom-7 w-[calc(100%+3rem)] md:w-[calc(100%+7rem)] h-[calc(100%+1rem)] md:h-[calc(100%+2rem)] pointer-events-none z-[-1]"
       preserveAspectRatio="none"
     >
       {/* First stroke */}
