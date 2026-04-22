@@ -97,8 +97,8 @@ export function Hero() {
                                 className={cn(
                                     "w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-all duration-300 transform hover:scale-110",
                                     (src.includes("img-11.png") || src.includes("img-12.png")) ? "h-14 md:h-24" :
-                                    (src.includes("img-03.png") || src.includes("img-04.png") || src.includes("img-05.png") || src.includes("img-10.png") || src.includes("img-13.png") || src.includes("img-14.png")) ? "h-6 md:h-10" :
-                                    "h-8 md:h-14"
+                                        (src.includes("img-03.png") || src.includes("img-04.png") || src.includes("img-05.png") || src.includes("img-10.png") || src.includes("img-13.png") || src.includes("img-14.png")) ? "h-6 md:h-10" :
+                                            "h-8 md:h-14"
                                 )}
                             />
                         </div>
