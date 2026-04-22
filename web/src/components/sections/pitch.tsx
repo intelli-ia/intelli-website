@@ -50,18 +50,22 @@ export function Pitch() {
                         {
                             title: "Infraestrutura.",
                             description: "Sua empresa ganha uma página de alta conversão para o Google e um Instagram estruturado para que todo visitante seja guiado de forma clara até a compra.",
+                            image: "/stages/01.webp"
                         },
                         {
                             title: "Captação Inteligente.",
                             description: "Com a base pronta, sua empresa atrai clientes com anúncios adaptados ao interesse de cada um, enquanto o sistema rastreia os visitantes para aprender e tornar as campanhas mais inteligentes.",
+                            image: "/stages/02.webp"
                         },
                         {
                             title: "Multi-Agentes.",
                             description: "Seu atendimento passa a rodar 24h/dia com agentes de IA humanizados que vendem no WhatsApp, reativam conversas sem resposta, atualizam seu CRM e enviam relatórios de vendas diariamente.",
+                            image: "/stages/03.webp"
                         },
                         {
                             title: "Fechamento.",
                             description: "Livre da burocracia, a sua equipe interna foca exclusivamente em tirar pedidos, fechar vendas e garantir uma experiência de excelência para os clientes dentro da sua empresa.",
+                            image: "/stages/04.webp"
                         },
                     ].map((step, index) => (
                         <motion.div
@@ -108,7 +112,7 @@ export function Pitch() {
                                     </p>
                                 </motion.div>
 
-                                {/* Image Placeholder */}
+                                {/* Image Block */}
                                 <motion.div
                                     className={`${index % 2 !== 0 ? 'lg:order-1' : ''}`}
                                     initial={{ opacity: 0, scale: 0.95 }}
@@ -116,10 +120,13 @@ export function Pitch() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 1, delay: 0.4 }}
                                 >
-                                    <div className="bg-white/5 border border-white/10 rounded-[2rem] aspect-video w-full flex items-center justify-center group overflow-hidden">
-                                        <div className="text-white/20 text-sm italic group-hover:text-white/40 transition-colors">
-                                            {step.title} Visualization Placeholder
-                                        </div>
+                                    <div className="relative group rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+                                        <img 
+                                            src={step.image} 
+                                            alt={step.title}
+                                            className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E27]/40 to-transparent pointer-events-none" />
                                     </div>
                                 </motion.div>
                             </div>
