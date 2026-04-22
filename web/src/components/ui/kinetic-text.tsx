@@ -1,0 +1,59 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+interface KineticTextProps {
+  text: string;
+  className?: string;
+  color?: string;
+  progress?: any;
+}
+
+export function KineticText({ text, className, color = "text-[#0A0E27]", progress: externalProgress }: KineticTextProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const words = text.split(" ");
+  
+  const { scrollYProgress: internalProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 0.8", "end 0.2"],
+  });
+
+  const scrollYProgress = externalProgress || internalProgress;
+
+  return (
+    <div ref={containerRef} className={cn("relative", className)}>
+      <div className="flex flex-wrap justify-center gap-x-[0.3em] gap-y-[0.1em]">
+        {words.map((word, i) => {
+          const start = i / words.length;
+          const end = (i + 1) / words.length;
+          
+          return (
+            <Word key={i} progress={scrollYProgress} range={[start, end]} color={color}>
+              {word}
+            </Word>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+interface WordProps {
+  children: string;
+  progress: any;
+  range: [number, number];
+  color: string;
+}
+
+function Word({ children, progress, range, color }: WordProps) {
+  const opacity = useTransform(progress, range, [0.2, 1]);
+  
+  return (
+    <span className="relative inline-block">
+      <motion.span style={{ opacity }} className={cn(color)}>
+        {children}
+      </motion.span>
+    </span>
+  );
+}
+
