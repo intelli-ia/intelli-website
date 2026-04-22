@@ -40,7 +40,7 @@ export function Hero() {
                         <div className="flex flex-col items-center gap-4">
                             <div className="flex -space-x-3 md:-space-x-4">
                                 {[1, 2, 3, 4, 5].map((i) => (
-                                    <div key={i} className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#faf5ed] overflow-hidden shadow-md relative group transition-transform hover:scale-110 hover:z-10">
+                                    <div key={i} className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#faf5ed] overflow-hidden shadow-md relative group">
                                         <img
                                             src={`/testemonials/img-${i}.jpg`}
                                             alt="Success Case"
