@@ -36,7 +36,7 @@ export function KineticText({
         {words.map((word, i) => {
           const start = i / words.length;
           const end = (i + 1) / words.length;
-          const isNotated = notationWord && word.toLowerCase().includes(notationWord.toLowerCase());
+          const isNotated = !!(notationWord && word.toLowerCase().includes(notationWord.toLowerCase()));
           
           return (
             <Word 
