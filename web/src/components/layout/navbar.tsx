@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { Link } from "react-router-dom"
 
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false)
@@ -27,11 +28,11 @@ export function Navbar() {
                 )}
             >
                 {/* Logo */}
-                <a href="#" className="flex items-center gap-2.5 shrink-0">
+                <Link to="/" className="flex items-center gap-2.5 shrink-0">
                     <span className="font-sans font-bold text-xl text-[#0A0E27] tracking-tight">
                         intelli
                     </span>
-                </a>
+                </Link>
 
                 {/* Empty space where links were */}
                 <div className="hidden md:block flex-1" />
@@ -50,10 +51,9 @@ export function Navbar() {
                             Agendar Consultoria
                         </a>
                     </Button>
-
-                    {/* Mobile toggle - Only needed if there are links, but keeping it for consistency if we add links back, or removing if strictly unnecessary. User said remove links, so mobile menu is basically empty now. I'll remove the toggle too for a cleaner 'Island' if it's just logo + button. */}
                 </div>
             </div>
         </header>
     )
 }
+

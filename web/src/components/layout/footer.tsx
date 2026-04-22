@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export function Footer() {
     const whatsappNumber = "71983477264";
     const whatsappMessage = encodeURIComponent("Vi o site e gostaria de entender melhor o processo");
@@ -28,11 +30,12 @@ export function Footer() {
                 <div className="mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
                     <p>© 2026 | Todos os direitos reservados.</p>
                     <div className="flex gap-6">
-                        <a href="#" className="hover:text-intelli-blue transition-colors">Política de Privacidade</a>
-                        <a href="#" className="hover:text-intelli-blue transition-colors">Termos de Uso</a>
+                        <Link to="/politica-de-privacidade" className="hover:text-intelli-blue transition-colors">Política de Privacidade</Link>
+                        <Link to="/termos-de-uso" className="hover:text-intelli-blue transition-colors">Termos de Uso</Link>
                     </div>
                 </div>
             </div>
         </footer >
     )
 }
+
