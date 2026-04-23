@@ -19,7 +19,7 @@ export function Navbar() {
                 scrolled ? "pt-4" : "pt-6"
             )}
         >
-            <div 
+            <div
                 className={cn(
                     "w-full max-w-6xl flex items-center justify-between px-6 h-14 transition-all duration-500",
                     "bg-[#faf5ed]/80 backdrop-blur-xl border border-black/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
@@ -30,7 +30,7 @@ export function Navbar() {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2.5 shrink-0">
                     <span className="font-sans font-bold text-xl text-[#0A0E27] tracking-tight">
-                        intelli
+                        intelliAI
                     </span>
                 </Link>
 
@@ -43,7 +43,7 @@ export function Navbar() {
                         asChild
                         className="bg-[#0A0E27] hover:bg-[#1a2244] text-white font-semibold text-sm px-6 h-10 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
                     >
-                        <a 
+                        <a
                             href={`https://wa.me/5571983477264?text=${encodeURIComponent("Vi o site e gostaria de entender melhor o processo")}`}
                             target="_blank"
                             rel="noopener noreferrer"

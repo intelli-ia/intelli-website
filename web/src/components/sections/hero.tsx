@@ -23,7 +23,7 @@ export function Hero() {
                             Automatize seu fluxo<br className="hidden md:block" /> de vendas com IA
                         </h1>
                         <p className="text-[#4A5568] text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed font-light mx-auto">
-                            A Intelli potencializou <span className="font-semibold text-[#1A202C]">mais de 120 empresas</span> com funis de vendas <span className="font-semibold text-[#1A202C]">automatizados com IA</span>, ajudando negócios a converter mais clientes.
+                            Potencializamos <span className="font-semibold text-[#1A202C]">mais de 120 empresas</span> com funis de vendas <span className="font-semibold text-[#1A202C]">automatizados com IA</span>, ajudando negócios a converter mais clientes.
                         </p>
                     </div>
 
