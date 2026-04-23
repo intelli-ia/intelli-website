@@ -78,7 +78,7 @@ export function PrivacyPolicy() {
           </section>
 
           <section className="pt-8 text-sm italic">
-            <p>Última atualização: 22 de abril de 2026</p>
+            <p>Última atualização: 16 de fevereiro de 2026</p>
           </section>
         </div>
       </motion.div>
