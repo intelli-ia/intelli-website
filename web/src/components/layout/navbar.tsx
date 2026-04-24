@@ -30,7 +30,7 @@ export function Navbar() {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2.5 shrink-0">
                     <span className="font-sans font-bold text-xl text-[#0A0E27] tracking-tight">
-                        intelliAI
+                        intelli.ai
                     </span>
                 </Link>
 
